@@ -61,8 +61,6 @@ while True:
 		image_name = f"{current_time} {person_name}.jpg"
 		image_path = os.path.join(Face_Folder, image_name)
 	
-		face_detected_count = 0
-		captured_Lord_John_Perucho = True
 		#For Annotation
 		annotation = ET.Element('annotation')
 		folder = ET.SubElement(annotation, 'folder')
