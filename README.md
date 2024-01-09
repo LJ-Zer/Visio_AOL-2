@@ -7,6 +7,6 @@
 
 ## Execution
 1. Edit the "run" file, open it on notepad or VSCode.
-- change the "your_name_here" with your actual name.
-1. Execute the run.sh file in the gitbash
-- source run.sh
+  - change the "your_name_here" with your actual name.
+2. Execute the run.sh file in the gitbash
+  - source run.sh
