@@ -12,3 +12,5 @@
   - source run.sh
 
 python caffe_face_detection_webcam_no_time.py --name "your_name_here"
+## Termination
+press -q
