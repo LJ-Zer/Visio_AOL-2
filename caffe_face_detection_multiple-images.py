@@ -32,6 +32,8 @@ for filename in os.listdir(image_folder):
 
         # Load the input image and construct an input blob
         frame = cv2.imread(image_path)
+        # I'm doing resizing here based on my CNN Algorithm
+        frame = cv2.resize(frame, (300, 300))
         (h, w) = frame.shape[:2]
         blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)), 1.0, (300, 300), (104.0, 177.0, 123.0))
         net.setInput(blob)
