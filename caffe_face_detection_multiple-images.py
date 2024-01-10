@@ -5,11 +5,16 @@ import time
 import argparse
 import xml.etree.ElementTree as ET
 
-# Argument for --name
+# Argument for --name and directory of the images
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument('--name', help='Put the name of the person.', default="Visitor")
 args = arg_parser.parse_args()
 person_name = args.name
+
+arg_parser.add_argument('--images', help='Put the directory of the images.', default="Images")
+args = arg_parser.parse_args()
+image_dir = args.images
+image_folder = image_dir
 
 Face_Folder = person_name
 if not os.path.exists(Face_Folder):
@@ -17,9 +22,6 @@ if not os.path.exists(Face_Folder):
 
 # Load our serialized model from disk
 net = cv2.dnn.readNetFromCaffe('deploy.prototxt.txt', 'face.caffemodel')
-
-# Specify the path to the folder containing images
-image_folder = "C:/Users/AI/Desktop/Short_Dataset/output"
 
 # Loop over all images in the folder
 for filename in os.listdir(image_folder):
