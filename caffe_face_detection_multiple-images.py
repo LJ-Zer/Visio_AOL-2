@@ -7,15 +7,16 @@ import xml.etree.ElementTree as ET
 
 # Argument for --name and directory of the images
 arg_parser = argparse.ArgumentParser()
+
 arg_parser.add_argument('--name', help='Put the name of the person.', default="Visitor")
+arg_parser.add_argument('--images', help='Put the directory of the images.', default=None)
+
 args = arg_parser.parse_args()
+
 person_name = args.name
+image_folder = args.images
 
-arg_parser.add_argument('--images', help='Put the directory of the images.', default="Images")
-args = arg_parser.parse_args()
-image_dir = args.images
-image_folder = image_dir
-
+person_name_counter = 0                                          
 Face_Folder = person_name
 if not os.path.exists(Face_Folder):
     os.makedirs(Face_Folder)
@@ -46,9 +47,9 @@ for filename in os.listdir(image_folder):
             y = startY - 10 if startY - 10 > 10 else startY + 10
 
             ################################################################################################
-            current_time = time.strftime("%Y-%m-%d %H-%M-%S")
+            current_time = time.strftime("%M-%S")
             # For Saving Annotation
-            image_name = f"{current_time} {person_name}.jpg"
+            image_name = f"{person_name} {person_name_counter} {current_time}.jpg"
             image_path = os.path.join(Face_Folder, image_name)
             cv2.imwrite(image_path, frame)
 
@@ -91,11 +92,11 @@ for filename in os.listdir(image_folder):
             ymax_elem = ET.SubElement(bndbox, 'ymax')
             ymax_elem.text = str(endY)
             # For Saving Annotation
-            xml_filename = f"{current_time} {person_name}.xml"
+            xml_filename = f"{person_name} {person_name_counter} {current_time}.xml"
             xml_path = os.path.join(Face_Folder, xml_filename)
             tree = ET.ElementTree(annotation)
             tree.write(xml_path)
-
+            person_name_counter += 1
             cv2.imshow("Frame", frame)
             key = cv2.waitKey(1) & 0xFF
 
