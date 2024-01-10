@@ -10,3 +10,5 @@
   - change the "your_name_here" with your actual name.
 2. Execute the run.sh file in the gitbash
   - source run.sh
+
+python caffe_face_detection_webcam_no_time.py --name "your_name_here"
