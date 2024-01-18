@@ -5,7 +5,7 @@ import time
 import argparse
 import xml.etree.ElementTree as ET
 
-# Argument for --name and directory of the images
+# Argument for --name and directory of the --images
 arg_parser = argparse.ArgumentParser()
 
 arg_parser.add_argument('--name', help='Put the name of the person.', default="Visitor")
