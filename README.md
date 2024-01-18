@@ -23,5 +23,8 @@ Note: Don't execute this, this command is only used after the data augmentation 
 
 - python caffe_face_detection_multiple-images.py --name "your_name_here" --images "path/of/your/images"
 
+## For Video only
+- python caffe_face_detection_video.py --name "your_name_here" --video "path/of/your/video.mp4"
+
 ## Termination
 - press "q" 
