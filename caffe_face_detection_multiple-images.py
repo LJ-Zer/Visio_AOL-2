@@ -99,7 +99,7 @@ for filename in os.listdir(image_folder):
             tree = ET.ElementTree(annotation)
             tree.write(xml_path)
             person_name_counter += 1
-            cv2.imshow("Frame", frame)
+            cv2.imshow("VisioAccelerAI-Automatic-Labeller", frame)
             key = cv2.waitKey(1) & 0xFF
 
             if key == ord("q"):
