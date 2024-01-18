@@ -24,4 +24,4 @@ Note: Don't execute this, this command is only used after the data augmentation 
 - python caffe_face_detection_multiple-images.py --name "your_name_here" --images "path/of/your/images"
 
 ## Termination
-- press -q
+- press "q" 
