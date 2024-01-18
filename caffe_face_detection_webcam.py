@@ -104,7 +104,7 @@ while True:
 		xml_path = os.path.join(Face_Folder, xml_filename)
 		tree = ET.ElementTree(annotation)
 
-	cv2.imshow("Frame", frame)
+	cv2.imshow("VisioAccelerAI Data Collector", frame)
 	key = cv2.waitKey(1) & 0xFF
 
 	if key == ord("c"):
