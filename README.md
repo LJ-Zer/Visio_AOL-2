@@ -1,9 +1,9 @@
 # Visio_Automation-of-Labelling_V2
 
 ## Preparation
-1. Install git
-2. Git clone this repository
-3. Open gitbash on the folder
+1. Install Git
+2. Clone this repository
+3. Open Gitbash on the folder
 
 ## Execution
 1. Edit the "run" file, open it on notepad or VSCode.
@@ -18,10 +18,10 @@ Note: No need to run the source run.sh, just activate the virtual environment an
 
 - python caffe_face_detection_webcam_no_time.py --name "your_name_here"
 
-## For images only 
+## For Images only 
 Note: Don't execute this, this command is only used after the data augmentation process.
 
 - python caffe_face_detection_multiple-images.py --name "your_name_here" --images "path/of/your/images"
 
 ## Termination
-press -q
+- press -q
