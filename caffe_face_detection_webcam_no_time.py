@@ -105,7 +105,7 @@ while True:
 		xml_filename = f"{current_time} {person_name} {person_name_counter}.xml"
 		xml_path = os.path.join(Face_Folder, xml_filename)
 		tree = ET.ElementTree(annotation)
-		tree.write(xml_path)
+		# tree.write(xml_path)
 		person_name_counter += 1
 
 	cv2.imshow("VisioAccelerAI Data Collector", frame)
