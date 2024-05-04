@@ -42,10 +42,10 @@ while True:
 
   # Change this based sa input mo sa CNN
   # frame = imutils.resize(frame, height=300, width=300)
-  frame = cv2.resize(frame, (640, 360))
+  frame = cv2.resize(frame, (1280, 720))
 
   (h, w) = frame.shape[:2]
-  blob = cv2.dnn.blobFromImage(cv2.resize(frame, (640, 360)), 1.0, 640, 360), (104.0, 177.0, 123.0))
+  blob = cv2.dnn.blobFromImage(cv2.resize(frame, (1280, 720)), 1.0, 1280, 720), (104.0, 177.0, 123.0))
   net.setInput(blob)
   detections = net.forward()
 
