@@ -42,7 +42,7 @@ while True:
 
   # Change this based sa input mo sa CNN
   # frame = imutils.resize(frame, height=300, width=300)
-  frame = cv2.resize(frame, (1280, 720))
+  frame = cv2.resize(frame, (2560, 1440))
 
   (h, w) = frame.shape[:2]
   blob = cv2.dnn.blobFromImage(cv2.resize(frame, (640, 360)), 1.0, (640, 360), (104.0, 177.0, 123.0))
