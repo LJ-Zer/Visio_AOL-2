@@ -45,7 +45,7 @@ while True:
   frame = cv2.resize(frame, (2560, 1440))
 
   (h, w) = frame.shape[:2]
-  blob = cv2.dnn.blobFromImage(cv2.resize(frame, (640, 360)), 1.0, (640, 360), (104.0, 177.0, 123.0))
+  blob = cv2.dnn.blobFromImage(cv2.resize(frame, (2560, 1440)), 1.0, (2560, 1440), (104.0, 177.0, 123.0))
   net.setInput(blob)
   detections = net.forward()
 
