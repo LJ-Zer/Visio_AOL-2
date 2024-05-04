@@ -44,7 +44,6 @@ while True:
   # frame = imutils.resize(frame, height=300, width=300)
   frame = cv2.resize(frame, (1280, 720))
   frame_disp = cv2.resize(frame, (640, 360))
-
   (h, w) = frame.shape[:2]
   blob = cv2.dnn.blobFromImage(cv2.resize(frame, (640, 360)), 1.0, (640, 360), (104.0, 177.0, 123.0))
   net.setInput(blob)
@@ -77,7 +76,8 @@ while True:
 
   # Display FPS on the frame
   cv2.putText(frame, f"FPS: {fps:.2f}", (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-  cv2.imshow("VisioAccelerAI Data Collector", frame_disp)
+
+  cv2.imshow("VisioAccelerAI Data Collector", frame)
 
   key = cv2.waitKey(1) & 0xFF
 
