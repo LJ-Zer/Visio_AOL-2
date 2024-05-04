@@ -77,7 +77,6 @@ while True:
 
   # Display FPS on the frame
   cv2.putText(frame, f"FPS: {fps:.2f}", (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-
   cv2.imshow("VisioAccelerAI Data Collector", frame_disp)
 
   key = cv2.waitKey(1) & 0xFF
