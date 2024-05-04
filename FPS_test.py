@@ -76,7 +76,7 @@ while True:
 
   # Display FPS on the frame
 # Display FPS on the frame
-  display_frame = cv2.resize(frame, (960, 540))  # Change display size here
+  display_frame = cv2.resize(frame, (640, 360))  # Change display size here
   cv2.putText(display_frame, f"FPS: {fps:.2f}", (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
   cv2.imshow("VisioAccelerAI Data Collector", display_frame)
